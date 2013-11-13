@@ -5,9 +5,9 @@ KylesEcommStore::Application.routes.draw do
 
   root to: 'store#index', via: :get
 
-  match 'store/:id' => 'store#show', :as => 'product_page', :via => :get
 
   resources :products, except: :show
+  match 'products/:id' => 'store#show', :as => 'product'
 
 
   # The priority is based upon order of creation:

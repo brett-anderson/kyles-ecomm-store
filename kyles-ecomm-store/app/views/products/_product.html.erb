@@ -2,5 +2,8 @@
   <h3><%= link_to product.name, product %></h3>
   <p><strong>Price: </strong><%= number_to_currency product.price %></p>
   <div><%= product.description %></div>
+  <% if product.category %>
+     <div>Category: <%= product.category.name %></div>
+  <% end %>
 
 </section>
