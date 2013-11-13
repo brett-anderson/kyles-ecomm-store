@@ -1,5 +1,6 @@
 <section>
-  <h3><%= product.name %></h3>
+  <h3><%= link_to product.name, product %></h3>
+  <p><strong>Price: </strong><%= number_to_currency product.price %></p>
   <div><%= product.description %></div>
-  <p><strong>Price: </strong><%= number_to_currency product.price %></p> 
+
 </section>
