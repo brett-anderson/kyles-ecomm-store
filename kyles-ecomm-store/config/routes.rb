@@ -1,5 +1,8 @@
 KylesEcommStore::Application.routes.draw do
-  get "store/index"
+  
+  root to: 'store#index', via: :get
+
+  match 'store/:id' => 'store#show', :as => 'product_page', :via => :get
 
   resources :products
 
